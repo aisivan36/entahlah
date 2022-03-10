@@ -3,8 +3,8 @@ import 'package:koruwel/components/pin_dot.dart';
 import 'package:koruwel/components/pin_number.dart';
 import 'package:koruwel/popup/popup_pin_created.dart';
 
-class FromPinConfirm extends StatelessWidget {
-  const FromPinConfirm({Key? key}) : super(key: key);
+class FormPinConfirm extends StatelessWidget {
+  const FormPinConfirm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:koruwel/forms/form_pin_confirm.dart';
-import 'package:koruwel/forms/form_pin_create.dart';
 import 'package:koruwel/themes/text_style.dart';
 
 class PinConfirm extends StatelessWidget {
@@ -37,7 +36,7 @@ class PinConfirm extends StatelessWidget {
             SizedBox(
               height: 32,
             ),
-            FromPinConfirm(),
+            FormPinConfirm(),
           ],
         ),
       ),
