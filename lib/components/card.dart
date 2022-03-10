@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:koruwel/components/avatar.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/components/chart_bar.dart';
 import 'package:koruwel/consts/color.dart';
 import 'package:koruwel/pages/details/detail_coin.dart';
@@ -46,7 +46,7 @@ class CardBig extends StatelessWidget {
                   padding: 16)
             ],
           ),
-          chartBar()
+          const ChartBar()
         ],
       ),
     );
@@ -146,8 +146,7 @@ class CardRectangleWallet extends StatelessWidget {
                   width: 4,
                 ),
                 Expanded(
-                  child: CustomButton.buttonWhite(
-                    context: context,
+                  child: ButtonWhite(
                     label: "Exchange to BTC",
                     onPressed: () => Get.to(
                       () => const Exchange(),
@@ -218,8 +217,8 @@ class CardRectangleHome extends StatelessWidget {
                   width: 50,
                 ),
                 Expanded(
-                    child: CustomButton.buttonPrimaryWithColor(
-                        context: context,
+                    child: ButtonPrimaryWithColor(
+                        // context: context,
                         height: 16,
                         textColor: Colors.black,
                         label: "Buy Now",
@@ -228,8 +227,8 @@ class CardRectangleHome extends StatelessWidget {
                   width: 8,
                 ),
                 Expanded(
-                  child: CustomButton.buttonPrimaryWithColor(
-                    context: context,
+                  child: ButtonPrimaryWithColor(
+                    // context: context,
                     height: 16,
                     color: Colors.transparent,
                     label: "Add To Cart",
@@ -406,24 +405,24 @@ class CardBigSlide extends StatelessWidget {
                 ],
               ),
               Row(
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     width: 16,
                   ),
                   Expanded(
-                      child: CustomButton.buttonPrimaryWithColor(
-                          context: context,
+                      child: ButtonPrimaryWithColor(
+                          // context: context,
                           textColor: primaryColor,
                           label: "Buy Now")),
-                  const SizedBox(
+                  SizedBox(
                     width: 16,
                   ),
                   Expanded(
-                      child: CustomButton.buttonPrimaryWithColor(
-                          context: context,
+                      child: ButtonPrimaryWithColor(
+                          // context: context,
                           color: Colors.transparent,
                           label: "Add To Cart")),
-                  const SizedBox(
+                  SizedBox(
                     width: 16,
                   ),
                 ],

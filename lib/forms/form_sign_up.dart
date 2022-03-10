@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/components/text_link.dart';
 import 'package:koruwel/themes/text_style.dart';
@@ -46,7 +46,7 @@ class FormSignUp extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          CustomButton.buttonPrimary(context: context, label: 'Sign Up'),
+          const ButtonPrimary(label: 'Sign Up'),
           const SizedBox(
             height: 16,
           ),
@@ -60,7 +60,7 @@ class FormSignUp extends StatelessWidget {
               const SizedBox(
                 width: 8,
               ),
-              customLink(label: "Sign In", onPressed: () => Get.back())
+              CustomLink(label: "Sign In", onPressed: () => Get.back())
             ],
           )
         ],

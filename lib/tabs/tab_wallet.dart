@@ -34,7 +34,7 @@ class TabWallet extends StatelessWidget {
                           Text("800,000.00", style: CustomTextStyle.formTitle)
                         ],
                       ),
-                      notification(),
+                      const CustomNotification(),
                     ],
                   ),
                   const SizedBox(

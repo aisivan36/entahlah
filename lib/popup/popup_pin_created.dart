@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/button_primary.dart';
 import 'package:koruwel/pages/home/home.dart';
 import 'package:koruwel/themes/text_style.dart';
 
@@ -37,10 +37,12 @@ void showPopupPinCreated(BuildContext context) {
               const SizedBox(
                 height: 16,
               ),
-              CustomButton.buttonPrimary(
-                  context: context,
-                  label: "Continue",
-                  onPressed: () => Get.offAll(() => const Home()))
+              ButtonPrimary(
+                label: "Continue",
+                onPressed: () => Get.offAll(
+                  () => const Home(),
+                ),
+              )
             ],
           ),
         ),

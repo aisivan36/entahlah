@@ -16,34 +16,40 @@ const List<Color> availableColors = [
   Colors.deepOrange,
 ];
 
+class ChartBarHome extends StatelessWidget {
+  const ChartBarHome({Key? key}) : super(key: key);
 
-Widget chartBarHome(){
-  return Column(
-    children: [
-      SizedBox(
-        height: 156,
-        width: double.infinity,
-        child: BarChart(
-          randomData(),
-          //BarChartData(
-          //  // read about it in the BarChartData section
-          //),
-          swapAnimationDuration: const Duration(milliseconds: 150), // Optional
-          swapAnimationCurve: Curves.linear, // Optional
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 156,
+          width: double.infinity,
+          child: BarChart(
+            randomData(),
+            //BarChartData(
+            //  // read about it in the BarChartData section
+            //),
+            swapAnimationDuration: const Duration(
+              milliseconds: 150,
+            ), // Optional
+            swapAnimationCurve: Curves.linear, // Optional
+          ),
         ),
-      ),
-    ],
-  );
+      ],
+    );
+  }
 }
 
 BarChartGroupData makeGroupData(
-    int x,
-    double y, {
-      bool isTouched = false,
-      Color barColor = Colors.white,
-      double width = 22,
-      List<int> showTooltips = const [],
-    }) {
+  int x,
+  double y, {
+  bool isTouched = false,
+  Color barColor = Colors.white,
+  double width = 22,
+  List<int> showTooltips = const [],
+}) {
   return BarChartGroupData(
     x: x,
     barRods: [
@@ -110,40 +116,43 @@ BarChartData randomData() {
     borderData: FlBorderData(
       show: false,
     ),
-    barGroups: List.generate(7, (i) {
-      switch (i) {
-        case 0:
-          return makeGroupData(0, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        case 1:
-          return makeGroupData(1, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        case 2:
-          return makeGroupData(2, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        case 3:
-          return makeGroupData(3, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        case 4:
-          return makeGroupData(4, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        case 5:
-          return makeGroupData(5, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        case 6:
-          return makeGroupData(6, Random().nextInt(15).toDouble() + 6,
-              barColor: availableColors[
-              Random().nextInt(availableColors.length)]);
-        default:
-          return throw Error();
-      }
-    }),
+    barGroups: List.generate(
+      7,
+      (i) {
+        switch (i) {
+          case 0:
+            return makeGroupData(0, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          case 1:
+            return makeGroupData(1, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          case 2:
+            return makeGroupData(2, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          case 3:
+            return makeGroupData(3, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          case 4:
+            return makeGroupData(4, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          case 5:
+            return makeGroupData(5, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          case 6:
+            return makeGroupData(6, Random().nextInt(15).toDouble() + 6,
+                barColor:
+                    availableColors[Random().nextInt(availableColors.length)]);
+          default:
+            return throw Error();
+        }
+      },
+    ),
     gridData: FlGridData(show: false),
   );
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:koruwel/components/avatar.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/components/card.dart';
-import 'package:koruwel/components/chart_bar.dart';
 import 'package:koruwel/components/chart_bar_home.dart';
 import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/components/label_with_dot.dart';
@@ -71,36 +70,37 @@ class TabHome extends StatelessWidget {
                             style: CustomTextStyle.formTitle,
                           )),
                           Expanded(
-                              child: CustomButton.buttonOutline(
-                                  context: context,
-                                  height: 16,
-                                  prefixIcon: Container(),
-                                  label: "Weekly",
-                                  suffixIcon: const Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 24,
-                                    color: primaryColor,
-                                  ))),
+                            child: ButtonOutline(
+                              height: 16,
+                              prefixIcon: Container(),
+                              label: "Weekly",
+                              suffixIcon: const Icon(
+                                Icons.keyboard_arrow_down,
+                                size: 24,
+                                color: primaryColor,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
                         height: 16,
                       ),
-                      chartBarHome(),
+                      const ChartBarHome(),
                       const SizedBox(
                         height: 16,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          labelWithDot(
+                        children: const [
+                          LabelWithDot(
                               label: "GOLD",
                               colorText: Colors.deepOrange,
                               colorDot: Colors.deepOrange),
-                          const SizedBox(
+                          SizedBox(
                             width: 8,
                           ),
-                          labelWithDot(
+                          LabelWithDot(
                               label: "DIAMOND",
                               colorText: Colors.deepPurple,
                               colorDot: Colors.deepPurple,

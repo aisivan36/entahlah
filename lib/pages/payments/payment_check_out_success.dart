@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:koruwel/components/avatar.dart';
-import 'package:koruwel/components/button.dart';
-import 'package:koruwel/components/input_text.dart';
+import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/consts/color.dart';
 import 'package:koruwel/pages/home/home.dart';
 import 'package:koruwel/themes/text_style.dart';
 
-class PaymentCheckOutSuccess extends StatelessWidget{
+class PaymentCheckOutSuccess extends StatelessWidget {
   const PaymentCheckOutSuccess({Key? key}) : super(key: key);
 
   @override
@@ -27,10 +26,15 @@ class PaymentCheckOutSuccess extends StatelessWidget{
                 children: [
                   GestureDetector(
                     child: const Icon(Icons.arrow_back),
-                    onTap: ()=>Get.back(),
+                    onTap: () => Get.back(),
                   ),
-                  const Text("Payment", style: CustomTextStyle.formTitle,),
-                  GestureDetector(child: const Icon(Icons.info),)
+                  const Text(
+                    "Payment",
+                    style: CustomTextStyle.formTitle,
+                  ),
+                  GestureDetector(
+                    child: const Icon(Icons.info),
+                  )
                 ],
               ),
             ),
@@ -40,23 +44,61 @@ class PaymentCheckOutSuccess extends StatelessWidget{
               width: double.infinity,
               decoration: BoxDecoration(
                   color: context.theme.backgroundColor,
-                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16))
-              ),
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16))),
               child: Column(
                 children: [
-                  avatarWithImage(assetImage: "assets/icons/check.png",padding: 16,size: 96, borderRadius: 64, color: Colors.white.withAlpha(50)),
-                  const SizedBox(height: 16,),
-                  const Text("Payment Success", style: CustomTextStyle.formTitle,),
-                  const SizedBox(height: 32,),
-                  CustomButton.buttonOutline(context: context, color: Colors.transparent,label: "Category", prefixIcon: const Icon(Icons.menu), suffixIcon: const Text("Food & Drink", style: TextStyle(color: Colors.white))),
-                  const SizedBox(height: 16,),
-                  CustomButton.buttonOutline(context: context,label: "Total Amount", prefixIcon: const Icon(Icons.calculate_outlined), suffixIcon: const Text("56,000.00", style: TextStyle(color: Colors.white)),color: Colors.transparent),
-                  const SizedBox(height: 16,),
-                  CustomButton.buttonOutline(context: context,label: "Martha", prefixIcon: const Icon(Icons.home_work_outlined), suffixIcon: const Text("New York", style: TextStyle(color: Colors.white)),color: Colors.transparent),
-                  const SizedBox(height: 32,),
+                  avatarWithImage(
+                      assetImage: "assets/icons/check.png",
+                      padding: 16,
+                      size: 96,
+                      borderRadius: 64,
+                      color: Colors.white.withAlpha(50)),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const Text(
+                    "Payment Success",
+                    style: CustomTextStyle.formTitle,
+                  ),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  const ButtonOutline(
+                      color: Colors.transparent,
+                      label: "Category",
+                      prefixIcon: Icon(Icons.menu),
+                      suffixIcon: Text("Food & Drink",
+                          style: TextStyle(color: Colors.white))),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const ButtonOutline(
+                      label: "Total Amount",
+                      prefixIcon: Icon(Icons.calculate_outlined),
+                      suffixIcon: Text("56,000.00",
+                          style: TextStyle(color: Colors.white)),
+                      color: Colors.transparent),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const ButtonOutline(
+                      label: "Martha",
+                      prefixIcon: Icon(Icons.home_work_outlined),
+                      suffixIcon: Text("New York",
+                          style: TextStyle(color: Colors.white)),
+                      color: Colors.transparent),
+                  const SizedBox(
+                    height: 32,
+                  ),
                   Row(
                     children: [
-                      Expanded(child: CustomButton.buttonPrimary(context: context, label: "OK", onPressed: ()=>Get.offAll(()=>const Home())),)
+                      Expanded(
+                        child: ButtonPrimary(
+                            label: "OK",
+                            onPressed: () => Get.offAll(() => const Home())),
+                      )
                     ],
                   )
                 ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/button_primary.dart';
 import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/popup/popup_reset_password.dart';
 import 'package:koruwel/themes/text_style.dart';
@@ -37,10 +37,10 @@ class FormForgotPassword extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          CustomButton.buttonPrimary(
-              context: context,
-              label: 'Reset Password',
-              onPressed: () => showPopupResetPassword(context)),
+          ButtonPrimary(
+            label: 'Reset Password',
+            onPressed: () => showPopupResetPassword(context),
+          ),
         ],
       ),
     );

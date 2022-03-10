@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/pages/pin/pin_create.dart';
 import 'package:koruwel/themes/text_style.dart';
@@ -45,8 +45,7 @@ class FormResetPassword extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          CustomButton.buttonPrimary(
-              context: context,
+          ButtonPrimary(
               label: 'Save Password',
               onPressed: () => Get.to(() => const PinCreate())),
         ],

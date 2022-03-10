@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/button_outline.dart';
 import 'package:koruwel/components/card.dart';
 import 'package:koruwel/consts/color.dart';
 import 'package:koruwel/pages/appbars/app_bar_empty.dart';
@@ -32,8 +32,7 @@ class TabProfile extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                ButtonOutline(
                     color: Colors.transparent,
                     prefixIcon: const Icon(
                       Icons.calculate_outlined,
@@ -55,8 +54,7 @@ class TabProfile extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                ButtonOutline(
                     color: Colors.transparent,
                     prefixIcon: const Icon(
                       Icons.credit_card,
@@ -85,70 +83,65 @@ class TabProfile extends StatelessWidget {
                 const SizedBox(
                   height: 32,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                const ButtonOutline(
                     label: "Notifications",
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.notification_important,
                       color: primaryColor,
                     ),
-                    suffixIcon: const Icon(
+                    suffixIcon: Icon(
                       Icons.arrow_forward_ios,
                       color: primaryColor,
                     )),
                 const SizedBox(
                   height: 16,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                const ButtonOutline(
                     label: "Refer A Friend",
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.compare_arrows_rounded,
                       color: primaryColor,
                     ),
-                    suffixIcon: const Icon(
+                    suffixIcon: Icon(
                       Icons.arrow_forward_ios,
                       color: primaryColor,
                     )),
                 const SizedBox(
                   height: 16,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                const ButtonOutline(
                     label: "Support",
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.contact_support,
                       color: primaryColor,
                     ),
-                    suffixIcon: const Icon(
+                    suffixIcon: Icon(
                       Icons.arrow_forward_ios,
                       color: primaryColor,
                     )),
                 const SizedBox(
                   height: 16,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                const ButtonOutline(
                     label: "Term & Condition",
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.library_books,
                       color: primaryColor,
                     ),
-                    suffixIcon: const Icon(
+                    suffixIcon: Icon(
                       Icons.arrow_forward_ios,
                       color: primaryColor,
                     )),
                 const SizedBox(
                   height: 16,
                 ),
-                CustomButton.buttonOutline(
-                    context: context,
+                const ButtonOutline(
                     label: "Log Out",
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.logout,
                       color: primaryColor,
                     ),
-                    suffixIcon: const Icon(
+                    suffixIcon: Icon(
                       Icons.arrow_forward_ios,
                       color: primaryColor,
                     )),
