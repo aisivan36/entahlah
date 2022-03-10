@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:koruwel/components/buttons/button_primary.dart';
-import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/popup/popup_reset_password.dart';
 import 'package:koruwel/themes/text_style.dart';
+
+import '../../components/text_fields/input_text.dart';
 
 class FormForgotPassword extends StatelessWidget {
   const FormForgotPassword({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class FormForgotPassword extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          CustomInput.inputText(
+          const InputText(
               labelText: 'Username / Email',
               textInputType: TextInputType.emailAddress),
           const SizedBox(

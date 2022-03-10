@@ -4,11 +4,12 @@ import 'package:koruwel/components/avatar.dart';
 import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/components/card.dart';
 import 'package:koruwel/components/chart_bar_home.dart';
-import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/components/label_with_dot.dart';
 import 'package:koruwel/consts/color.dart';
 import 'package:koruwel/pages/appbars/app_bar_empty.dart';
 import 'package:koruwel/themes/text_style.dart';
+
+import '../components/text_fields/input_search.dart';
 
 class TabHome extends StatelessWidget {
   const TabHome({Key? key}) : super(key: key);
@@ -29,10 +30,10 @@ class TabHome extends StatelessWidget {
                 width: double.infinity,
                 child: Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                         flex: 5,
-                        child: CustomInput.inputSearch(context,
-                            icon: const Icon(
+                        child: InputSearch(
+                            icon: Icon(
                               Icons.search,
                               color: primaryColor,
                             ),

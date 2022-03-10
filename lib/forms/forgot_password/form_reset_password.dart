@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:koruwel/components/buttons/buttons.dart';
-import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/pages/pin/pin_create.dart';
 import 'package:koruwel/themes/text_style.dart';
+
+import '../../components/text_fields/input_text.dart';
 
 class FormResetPassword extends StatelessWidget {
   const FormResetPassword({Key? key}) : super(key: key);
@@ -29,17 +30,17 @@ class FormResetPassword extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          CustomInput.inputText(
+          const InputText(
               labelText: 'New Password',
-              suffixIcon: const Icon(Icons.remove_red_eye_rounded),
+              suffixIcon: Icon(Icons.remove_red_eye_rounded),
               textInputType: TextInputType.visiblePassword,
               secureText: true),
           const SizedBox(
             height: 16,
           ),
-          CustomInput.inputText(
+          const InputText(
               labelText: 'Confirm New Password',
-              suffixIcon: const Icon(Icons.remove_red_eye_rounded),
+              suffixIcon: Icon(Icons.remove_red_eye_rounded),
               textInputType: TextInputType.visiblePassword,
               secureText: true),
           const SizedBox(

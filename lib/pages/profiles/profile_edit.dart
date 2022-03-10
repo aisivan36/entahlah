@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:koruwel/components/avatar.dart';
 import 'package:koruwel/components/buttons/button_primary.dart';
-import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/consts/color.dart';
 import 'package:koruwel/pages/home/home.dart';
+
+import '../../components/text_fields/input_text.dart';
 
 class ProfileEdit extends StatelessWidget {
   const ProfileEdit({Key? key}) : super(key: key);
@@ -55,26 +56,26 @@ class ProfileEdit extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              CustomInput.inputText(labelText: "Name"),
+              const InputText(labelText: "Name"),
               const SizedBox(
                 height: 16,
               ),
-              CustomInput.inputText(
+              const InputText(
                   labelText: "Email Address",
                   textInputType: TextInputType.emailAddress),
               const SizedBox(
                 height: 16,
               ),
-              CustomInput.inputText(
+              const InputText(
                   labelText: "Phone Number",
                   textInputType: TextInputType.phone),
               const SizedBox(
                 height: 16,
               ),
-              CustomInput.inputText(
+              const InputText(
                   labelText: "Birtday",
                   textInputType: TextInputType.datetime,
-                  suffixIcon: const Icon(
+                  suffixIcon: Icon(
                     Icons.calendar_today,
                     color: primaryColor,
                   )),
