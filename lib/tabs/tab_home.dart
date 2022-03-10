@@ -11,7 +11,7 @@ import 'package:koruwel/consts/color.dart';
 import 'package:koruwel/pages/appbars/app_bar_empty.dart';
 import 'package:koruwel/themes/text_style.dart';
 
-class TabHome extends StatelessWidget{
+class TabHome extends StatelessWidget {
   const TabHome({Key? key}) : super(key: key);
 
   @override
@@ -30,9 +30,27 @@ class TabHome extends StatelessWidget{
                 width: double.infinity,
                 child: Row(
                   children: [
-                    Expanded(flex: 5,child: CustomInput.inputSearch(context,icon: const Icon(Icons.search, color: primaryColor,),labelText: "Search")),
-                    const SizedBox(width: 8,),
-                    Expanded(flex: 1,child: avatarWithIcon(icon: const Icon(Icons.notifications, size: 32,), size: 64, padding: 4, color: Colors.white.withAlpha(50)))
+                    Expanded(
+                        flex: 5,
+                        child: CustomInput.inputSearch(context,
+                            icon: const Icon(
+                              Icons.search,
+                              color: primaryColor,
+                            ),
+                            labelText: "Search")),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(
+                        flex: 1,
+                        child: avatarWithIcon(
+                            icon: const Icon(
+                              Icons.notifications,
+                              size: 32,
+                            ),
+                            size: 64,
+                            padding: 4,
+                            color: Colors.white.withAlpha(50)))
                   ],
                 ),
               ),
@@ -41,30 +59,61 @@ class TabHome extends StatelessWidget{
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      cardBigSlide(context),
-                      const SizedBox(height: 16,),
+                      const CardBigSlide(),
+                      const SizedBox(
+                        height: 16,
+                      ),
                       Row(
-                        children:  [
-                          const Expanded(child: Text("Market Status", style: CustomTextStyle.formTitle,)),
-                          Expanded(child: CustomButton.buttonOutline(context: context, height: 16 , prefixIcon: Container(), label: "Weekly", suffixIcon: const Icon(Icons.keyboard_arrow_down, size: 24, color: primaryColor,))),
+                        children: [
+                          const Expanded(
+                              child: Text(
+                            "Market Status",
+                            style: CustomTextStyle.formTitle,
+                          )),
+                          Expanded(
+                              child: CustomButton.buttonOutline(
+                                  context: context,
+                                  height: 16,
+                                  prefixIcon: Container(),
+                                  label: "Weekly",
+                                  suffixIcon: const Icon(
+                                    Icons.keyboard_arrow_down,
+                                    size: 24,
+                                    color: primaryColor,
+                                  ))),
                         ],
                       ),
-                      const SizedBox(height: 16,),
+                      const SizedBox(
+                        height: 16,
+                      ),
                       chartBarHome(),
-                      const SizedBox(height: 16,),
+                      const SizedBox(
+                        height: 16,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          labelWithDot(label: "GOLD", colorText: Colors.deepOrange, colorDot: Colors.deepOrange),
-                          const SizedBox(width: 8,),
-                          labelWithDot(label: "DIAMOND", colorText: Colors.deepPurple, colorDot: Colors.deepPurple, alignment: MainAxisAlignment.start),
+                          labelWithDot(
+                              label: "GOLD",
+                              colorText: Colors.deepOrange,
+                              colorDot: Colors.deepOrange),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          labelWithDot(
+                              label: "DIAMOND",
+                              colorText: Colors.deepPurple,
+                              colorDot: Colors.deepPurple,
+                              alignment: MainAxisAlignment.start),
                         ],
                       ),
-                      const SizedBox(height: 16,),
-                      cardRectangleHome(context),
-                      cardRectangleHome(context),
-                      cardRectangleHome(context),
-                      cardRectangleHome(context),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      const CardRectangleHome(),
+                      const CardRectangleHome(),
+                      const CardRectangleHome(),
+                      const CardRectangleHome(),
                     ],
                   ),
                 ),
