@@ -1,41 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:koruwel/consts/color.dart';
-import 'package:koruwel/pages/appbars/app_bar_empty.dart';
 import 'package:koruwel/tabs/tab_cart.dart';
 import 'package:koruwel/tabs/tab_home.dart';
 import 'package:koruwel/tabs/tab_profile.dart';
 import 'package:koruwel/tabs/tab_wallet.dart';
 
-class Home extends StatelessWidget{
+class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return DefaultTabController(
-        length: 4,
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          bottomNavigationBar: menu(context),
-          body: const TabBarView(
-            children: [
-              TabHome(),
-              TabWallet(),
-              TabCart(),
-              TabProfile(),
-            ],
-          ),
+    return const DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        bottomNavigationBar: _Menu(),
+        body: TabBarView(
+          children: [
+            TabHome(),
+            TabWallet(),
+            TabCart(),
+            TabProfile(),
+          ],
         ),
-      );
+      ),
+    );
   }
+}
 
-  Widget menu(BuildContext context){
+class _Menu extends StatelessWidget {
+  const _Menu({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-       color: primaryColor,
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16))
-      ),
+          color: primaryColor,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(16), topRight: Radius.circular(16))),
       child: TabBar(
         indicator: const UnderlineTabIndicator(
           borderSide: BorderSide(color: Colors.white, width: 4.0),
@@ -67,5 +70,4 @@ class Home extends StatelessWidget{
       ),
     );
   }
-
 }
