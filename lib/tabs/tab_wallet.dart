@@ -34,13 +34,13 @@ class TabWallet extends StatelessWidget {
                           Text("800,000.00", style: CustomTextStyle.formTitle)
                         ],
                       ),
-                      notification(),
+                      const CustomNotification(),
                     ],
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  cardBig(context),
+                  const CardBig(),
                   const SizedBox(
                     height: 16,
                   ),
@@ -54,35 +54,35 @@ class TabWallet extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      cardSquare(icon: "jewelry.png"),
-                      cardSquare(icon: "diamond.png"),
-                      cardSquare(icon: "silver.png"),
-                      cardSquare(icon: "gold.png"),
+                    children: const [
+                      CardSquare(icon: "jewelry.png"),
+                      CardSquare(icon: "diamond.png"),
+                      CardSquare(icon: "silver.png"),
+                      CardSquare(icon: "gold.png"),
                     ],
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 146,
-                    child: cardRectangleWallet(context, icon: "gold.png"),
+                    child: CardRectangleWallet(icon: "gold.png"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 146,
-                    child: cardRectangleWallet(context, icon: "silver.png"),
+                    child: CardRectangleWallet(icon: "silver.png"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 146,
-                    child: cardRectangleWallet(context, icon: "jewelry.png"),
+                    child: CardRectangleWallet(icon: "jewelry.png"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 146,
-                    child: cardRectangleWallet(context, icon: "diamond.png"),
+                    child: CardRectangleWallet(icon: "diamond.png"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 146,
-                    child: cardRectangleWallet(context, icon: "gold.png"),
+                    child: CardRectangleWallet(icon: "gold.png"),
                   ),
                 ],
               ),

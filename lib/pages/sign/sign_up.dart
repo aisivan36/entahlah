@@ -3,7 +3,7 @@ import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:koruwel/components/logo.dart';
 import 'package:koruwel/forms/form_sign_up.dart';
 
-class SignUp extends StatelessWidget{
+class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
   @override
@@ -13,9 +13,9 @@ class SignUp extends StatelessWidget{
       backgroundColor: context.theme.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            logo(),
-            formSignUp(context)
+          children: const [
+            Logo(),
+            FormSignUp(),
           ],
         ),
       ),

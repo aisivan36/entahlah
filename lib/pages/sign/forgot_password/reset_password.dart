@@ -3,7 +3,7 @@ import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:koruwel/components/logo.dart';
 import 'package:koruwel/forms/forgot_password/form_reset_password.dart';
 
-class ResetPassword extends StatelessWidget{
+class ResetPassword extends StatelessWidget {
   const ResetPassword({Key? key}) : super(key: key);
 
   @override
@@ -13,9 +13,9 @@ class ResetPassword extends StatelessWidget{
       backgroundColor: context.theme.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            logo(),
-            formResetPassword(context),
+          children: const [
+            Logo(),
+            FormResetPassword(),
           ],
         ),
       ),

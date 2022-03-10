@@ -3,7 +3,7 @@ import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:koruwel/components/logo.dart';
 import 'package:koruwel/forms/forgot_password/form_forgot_password.dart';
 
-class ForgotPassword extends StatelessWidget{
+class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
 
   @override
@@ -13,9 +13,9 @@ class ForgotPassword extends StatelessWidget{
       backgroundColor: context.theme.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            logo(),
-            formForgotPassword(context)
+          children: const [
+            Logo(),
+            FormForgotPassword(),
           ],
         ),
       ),

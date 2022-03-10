@@ -14,11 +14,11 @@ class FormPinCreate extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            pinDot(color: Colors.deepPurple),
-            pinDot(color: Colors.deepPurple),
-            pinDot(),
-            pinDot(),
+          children: const [
+            PinDot(color: Colors.deepPurple),
+            PinDot(color: Colors.deepPurple),
+            PinDot(),
+            PinDot(),
           ],
         ),
         const SizedBox(

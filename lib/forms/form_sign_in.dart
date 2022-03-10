@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:koruwel/components/button.dart';
+import 'package:koruwel/components/buttons/buttons.dart';
 import 'package:koruwel/components/input_text.dart';
 import 'package:koruwel/components/text_link.dart';
 import 'package:koruwel/pages/home/home.dart';
@@ -40,14 +40,13 @@ class FormSignIn extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          CustomButton.buttonPrimary(
-              context: context,
+          ButtonPrimary(
               label: 'Sign In',
               onPressed: () => Get.offAll(() => const Home())),
           const SizedBox(
             height: 16,
           ),
-          customLink(
+          CustomLink(
               label: "Forgot Password?",
               onPressed: () => Get.to(() => const ForgotPassword())),
           const SizedBox(
@@ -63,7 +62,7 @@ class FormSignIn extends StatelessWidget {
               const SizedBox(
                 width: 8,
               ),
-              customLink(
+              CustomLink(
                   label: "Sign Up",
                   onPressed: () => Get.to(() => const SignUp()))
             ],
